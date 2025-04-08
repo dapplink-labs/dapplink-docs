@@ -116,49 +116,122 @@ function sidebarDappLink(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'What is DappLink Layer3 ？', link: 'what-is-dapplink-layer3' }
       ]
-    },
+    }
   ]
 }
 
 function sidebarWallet(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: 'One-Click Wallet Deployment',
       items: [
-        { text: 'System Architecture', link: 'system-architecture' },
-        { text: 'Core Function', link: 'dapplink-wallet' },
         {
-          text: 'Project Components',
-          base: '/wallet/',
+          text: 'Introduction',
+          base: '/en/wallet/',
+          collapsed: false,
+          items: [
+            { text: 'Overview', link: 'overview' },
+            { text: 'Functional Modules', link: 'core-function' }
+          ]
+        },
+        {
+          text: 'Core Functional Modules',
+          base: '/en/wallet/',
+          collapsed: false,
+          items: [
+            { text: 'Unified Signature Service Workflow', link: 'signature' },
+            { text: 'Centralized Wallet Workflow', link: 'centralized-wallet' },
+            {
+              text: 'Decentralized Wallet Workflow',
+              link: 'decentralized-wallet'
+            },
+            { text: 'MPC Network', link: 'tss' }
+          ]
+        },
+        {
+          text: 'Detailed Overview of Exchange Wallet Business Flow',
+          base: '/en/wallet/centralized/',
+          collapsed: false,
           items: [
             {
-              text: 'Unified Browser API Code Library',
-              link: 'chain-explorer-api'
+              text: 'Merchant Information Submission',
+              link: 'business-submit'
+            },
+            { text: 'Merchant ID Configuration', link: 'business-id-config' },
+            {
+              text: 'Token Configuration by Business Party',
+              link: 'set-chain-token'
             },
             {
-              text: 'Unified RPC Interface Service',
-              link: 'wallet-chain-node'
+              text: 'Batch Address Generation',
+              link: 'batch-generate-address'
             },
-            { text: 'Key Management Tool', link: 'key-locker' },
+            { text: 'Deposit Operation', link: 'deposit-flow' },
+            { text: 'Withdrawal Operation', link: 'withdraw-flow' },
+            { text: 'Fund Consolidation Operation', link: 'collection-flow' },
+            { text: 'Hot-to-Cold Transfer', link: 'hot-to-cold' },
+            { text: 'Cold-to-Hot Transfer', link: 'cold-to-hot' },
+            { text: 'Rollback Operation', link: 'fallback' },
+            { text: 'Service Deployment Method', link: 'service-deploy' }
+          ]
+        },
+        {
+          text: 'Detailed Overview of Decentralized Wallet Business Flow',
+          base: '/en/wallet/decentralized/',
+          collapsed: false,
+          items: [
+            { text: 'Wallet Address Generation', link: 'wallet-address-gen' },
+            { text: 'Mnemonic Export', link: 'mnemonic-export' },
+            { text: 'Mnemonic Import', link: 'mnemonic-import' },
+            { text: 'Private Key Export', link: 'private-export' },
+            { text: 'Private Key Import', link: 'private-import' },
+            { text: 'Receive Funds', link: 'deposit' },
+            { text: 'Transfer Funds', link: 'transform' },
+            { text: 'Fetch Wallet Balance', link: 'get-wallet-balance' },
+            { text: 'Transaction History', link: 'transaction-record' },
+            { text: 'Token Discovery', link: 'token-find' },
+            { text: 'Market Data Module', link: 'market-data-module' },
+            { text: 'Asset Management Module', link: 'asset-manager-module' },
+            { text: 'Quick Exchange', link: 'quick-exchange' },
+            { text: 'DApp Browser', link: 'dapp-explorer' }
+          ]
+        },
+        {
+          text: 'PayFi Technical Solution',
+          base: '/en/wallet/payfi/',
+          collapsed: false,
+          items: [
             {
-              text: 'Underlying Library for Threshold Secret Sharing Algorithms',
-              link: 'dapplink-secret'
+              text: 'AI-Based Mnemonic-Free Wallet Solution',
+              link: 'ai-wallet'
             },
-            { text: 'Market Aggregator', link: 'skyeye' },
-            { text: 'Trade System', link: 'trade' },
-            { text: 'Offline Sign SDK', link: 'wallet-sdk' },
-            { text: 'MPC Network', link: 'tss' },
-            { text: 'Cross-Chain Staking Project', link: 'linklayer' },
-            { text: 'HD Wallet Backend Service', link: 'hailstone' },
             {
-              text: 'Unified Wallet Services for Deposit, Withdrawal, Aggregation, Cold Transfer, and Risk Control',
-              link: 'wallet-scanner'
+              text: 'High-Performance and Decentralized PayFi Application Chain',
+              link: 'payfi-appchain'
+            },
+            { text: 'PayFi QR Code Payment', link: 'payfi-scan' },
+            { text: 'PayFi Web-Initiated Payment', link: 'payfi-link-network' },
+            { text: 'Decentralized U-Card Payment', link: 'u-card-payment' },
+            {
+              text: 'Crypto Card + POS Terminal Payment',
+              link: 'digital-currency-card-payment'
             },
             {
-              text: 'Centralized Wallet Business Components',
-              link: 'centralized-wallet-servicer'
+              text: 'QR Code + POS Terminal Payment',
+              link: 'scan-qr-code-payment'
             }
           ]
+        },
+        {
+          text: 'Local Test Run',
+          base: '/en/wallet/',
+          collapsed: false,
+          items: [{ text: 'Local Startup Network', link: 'chain-setup' }]
+        },
+        {
+          text: 'DappLink TestNet',
+          base: '/en/wallet/',
+          collapsed: false,
+          items: [{ text: 'Introduction', link: 'dapplink-testnet' }]
         }
       ]
     }
@@ -183,21 +256,26 @@ function sidebarChain(): DefaultTheme.SidebarItem[] {
           base: '/en/chain/',
           collapsed: false,
           items: [
-            { text: 'RollUp and Proof System Layer', link: 'rollup-and-proof-system-abstraction' },
+            {
+              text: 'RollUp and Proof System Layer',
+              link: 'rollup-and-proof-system-abstraction'
+            },
             { text: 'Cross-Chain', link: 'cross-chain-abstraction' },
             { text: 'Multi-Staking Protocol', link: 'multi-staking-protocol' },
             { text: 'Fast Finality Network', link: 'fast-finality' },
-            { text: 'Modular and Composable Layer3', link: 'layer3-app-chain' },
+            { text: 'Modular and Composable Layer3', link: 'layer3-app-chain' }
           ]
-        }, {
+        },
+        {
           text: 'Local Test Run',
           base: '/en/chain/',
           collapsed: false,
           items: [
             { text: 'Local Startup Network', link: 'chain-setup' },
-            { text: 'Quick Start', link: 'start-test' },
+            { text: 'Quick Start', link: 'start-test' }
           ]
-        }, {
+        },
+        {
           text: 'DappLink TestNet',
           base: '/en/chain/',
           collapsed: false,
@@ -236,7 +314,7 @@ function sidebarDapp(): DefaultTheme.SidebarItem[] {
             { text: 'Staking And Lending', link: 'staking-protocol' },
             { text: 'LSP And ReStaking', link: 'lsp-restaking' },
             { text: 'On Chain Insurance', link: 'onchain-insurance' },
-            { text: 'PayFi And RWA', link: 'payfi-rwa' },
+            { text: 'PayFi And RWA', link: 'payfi-rwa' }
           ]
         },
         {
@@ -245,7 +323,7 @@ function sidebarDapp(): DefaultTheme.SidebarItem[] {
           collapsed: false,
           items: [
             { text: 'Local network', link: 'chain-setup' },
-            { text: 'Start', link: 'start-test' },
+            { text: 'Start', link: 'start-test' }
           ]
         }
       ]

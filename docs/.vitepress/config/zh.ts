@@ -19,7 +19,8 @@ export const zh = defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/dapplink-labs/dapplink-docs/edit/main/docs/:path',
+      pattern:
+        'https://github.com/dapplink-labs/dapplink-docs/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页面'
     },
 
@@ -106,31 +107,27 @@ function sidebarDappLink(): DefaultTheme.SidebarItem[] {
     {
       text: '一键发钱包',
       collapsed: false,
-      items: [
-        { text: '什么是一键发钱包', link: 'what-is-dapplink-wallet' },
-      ]
+      items: [{ text: '什么是一键发钱包', link: 'what-is-dapplink-wallet' }]
     },
     {
       text: '一键发公链',
       collapsed: false,
-      items: [
-        { text: '什么是一键发链', link: 'what-is-dapplink-chain' },
-      ]
+      items: [{ text: '什么是一键发链', link: 'what-is-dapplink-chain' }]
     },
     {
       text: '一键发去中心化组合应用',
       collapsed: false,
       items: [
-        { text: '什么是一键发去中心化组合应用', link: 'what-is-dapplink-dapps' },
+        { text: '什么是一键发去中心化组合应用', link: 'what-is-dapplink-dapps' }
       ]
     },
     {
       text: 'DappLink Layer3',
       collapsed: false,
       items: [
-        { text: 'DappLink Layer3 是什么', link: 'what-is-dapplink-layer3' },
+        { text: 'DappLink Layer3 是什么', link: 'what-is-dapplink-layer3' }
       ]
-    },
+    }
   ]
 }
 
@@ -173,40 +170,58 @@ function sidebarWallet(): DefaultTheme.SidebarItem[] {
             { text: '热转冷', link: 'hot-to-cold' },
             { text: '冷转热', link: 'cold-to-hot' },
             { text: '回滚业务', link: 'fallback' },
-            { text: '服务部署方式', link: 'service-deploy' },
+            { text: '服务部署方式', link: 'service-deploy' }
           ]
         },
         {
           text: '去中心化钱包业务流详细介绍',
-          base: '/zh/wallet/setup',
+          base: '/zh/wallet/decentralized/',
           collapsed: false,
           items: [
-            { text: '统一浏览器代码库', link: 'chain-explorer-api' },
+            { text: '钱包地址生成', link: 'wallet-address-gen' },
+            { text: '助记词导出', link: 'mnemonic-export' },
+            { text: '助记词导入', link: 'mnemonic-import' },
+            { text: '私钥导出', link: 'private-export' },
+            { text: '私钥导入', link: 'private-import' },
+            { text: '收款', link: 'deposit' },
+            { text: '转帐', link: 'transform' },
+            { text: '钱包余额获取', link: 'get-wallet-balance' },
+            { text: '交易记录', link: 'transaction-record' },
+            { text: '代币发现功能', link: 'token-find' },
+            { text: '行情业务模块', link: 'market-data-module' },
+            { text: '资产管理模块', link: 'asset-manager-module' },
+            { text: '闪兑', link: 'chain-explorer-api' },
+            { text: 'Dapp浏览器', link: 'dapp-explorer' }
           ]
         },
         {
           text: 'PayFi 技术解决方案',
-          base: '/zh/wallet/setup',
+          base: '/zh/wallet/payfi/',
           collapsed: false,
           items: [
-            { text: '统一浏览器代码库', link: 'chain-explorer-api' },
+            { text: '基于 AI 的无助记词钱包方案', link: 'ai-wallet' },
+            { text: '高效性和去中心化 PayFi 应用链', link: 'payfi-appchain' },
+            { text: 'PayFi 扫码支付', link: 'payfi-scan' },
+            { text: 'PayFi 唤起网页来支付', link: 'payfi-link-network' },
+            { text: '去中心化 U 卡支付', link: 'u-card-payment' },
+            {
+              text: '数字货币卡 + POS 机支付',
+              link: 'digital-currency-card-payment'
+            },
+            { text: '二维码 + POS 机支付', link: 'scan-qr-code-payment' }
           ]
         },
         {
           text: '本地运行测试',
-          base: '/zh/wallet/setup',
+          base: '/zh/wallet/',
           collapsed: false,
-          items: [
-            { text: '统一浏览器代码库', link: 'chain-explorer-api' },
-          ]
+          items: [{ text: '本地启动网络', link: 'start-test' }]
         },
         {
           text: '使用 DappLink 测试网络测试',
-          base: '/zh/wallet/setup',
+          base: '/zh/wallet/',
           collapsed: false,
-          items: [
-            { text: '统一浏览器代码库', link: 'chain-explorer-api' },
-          ]
+          items: [{ text: '测试网络介绍', link: 'dapplink-testnet' }]
         }
       ]
     }
@@ -231,21 +246,26 @@ function sidebarChain(): DefaultTheme.SidebarItem[] {
           base: '/zh/chain/',
           collapsed: false,
           items: [
-            { text: 'RollUp 和证明系统抽象', link: 'rollup-and-proof-system-abstraction' },
+            {
+              text: 'RollUp 和证明系统抽象',
+              link: 'rollup-and-proof-system-abstraction'
+            },
             { text: '跨链抽象', link: 'cross-chain-abstraction' },
             { text: '多重质押协议', link: 'multi-staking-protocol' },
             { text: '快速验证网络抽象', link: 'fast-finality' },
-            { text: '模块化可组合 Layer3', link: 'layer3-app-chain' },
+            { text: '模块化可组合 Layer3', link: 'layer3-app-chain' }
           ]
-        }, {
+        },
+        {
           text: '本地运行测试',
           base: '/zh/chain/',
           collapsed: false,
           items: [
             { text: '本地启动网络', link: 'chain-setup' },
-            { text: '开始使用', link: 'start-test' },
+            { text: '开始使用', link: 'start-test' }
           ]
-        }, {
+        },
+        {
           text: 'DappLink 测试网络测试',
           base: '/zh/chain/',
           collapsed: false,
@@ -284,7 +304,7 @@ function sidebarDapp(): DefaultTheme.SidebarItem[] {
             { text: '质押借贷协议', link: 'staking-protocol' },
             { text: 'LSP 和重新质押协议', link: 'lsp-restaking' },
             { text: '链上保险', link: 'onchain-insurance' },
-            { text: 'PayFi 和 RWA', link: 'payfi-rwa' },
+            { text: 'PayFi 和 RWA', link: 'payfi-rwa' }
           ]
         },
         {
@@ -293,7 +313,7 @@ function sidebarDapp(): DefaultTheme.SidebarItem[] {
           collapsed: false,
           items: [
             { text: '本地启动网络', link: 'chain-setup' },
-            { text: '开始使用', link: 'start-test' },
+            { text: '开始使用', link: 'start-test' }
           ]
         }
       ]
