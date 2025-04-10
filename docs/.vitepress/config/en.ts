@@ -223,15 +223,25 @@ function sidebarWallet(): DefaultTheme.SidebarItem[] {
         },
         {
           text: 'Local Test Run',
-          base: '/en/wallet/',
+          base: '/en/wallet/setup/',
           collapsed: false,
-          items: [{ text: 'Local Startup Network', link: 'chain-setup' }]
+          items: [
+            {
+              text: 'Run DappLink Local for One-Click Wallet Deployment Project',
+              link: 'start-local-test'
+            }
+          ]
         },
         {
           text: 'DappLink TestNet',
-          base: '/en/wallet/',
+          base: '/en/wallet/setup/',
           collapsed: false,
-          items: [{ text: 'Introduction', link: 'dapplink-testnet' }]
+          items: [
+            {
+              text: 'Test Business Workflow Using DappLink Test Network',
+              link: 'dapplink-wallet-testnet'
+            }
+          ]
         }
       ]
     }
