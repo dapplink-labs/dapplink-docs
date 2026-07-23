@@ -1,4 +1,4 @@
-.git
+# 保留 .git：docs 构建 lastUpdated 需要 git 历史
 .github
 node_modules
 docs/node_modules
