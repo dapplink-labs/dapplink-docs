@@ -1,0 +1,11 @@
+services:
+  dapplink-docs:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    image: dapplink-docs:latest
+    container_name: dapplink-docs
+    restart: unless-stopped
+    ports:
+      # 宿主机 8080 → 容器 80；宿主机 Nginx 再反代到 8080
+      - "127.0.0.1:8080:80"

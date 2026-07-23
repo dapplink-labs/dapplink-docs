@@ -1,0 +1,14 @@
+.git
+.github
+node_modules
+docs/node_modules
+docs/.vitepress/dist
+docs/.vitepress/cache
+dist
+charts
+values.yaml
+.DS_Store
+.vscode
+.idea
+CHANGELOG.md
+netlify.toml
