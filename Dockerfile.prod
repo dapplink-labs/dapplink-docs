@@ -12,7 +12,9 @@ RUN pnpm install --frozen-lockfile
 
 COPY . .
 ENV NODE_OPTIONS=--max-old-space-size=4096
-RUN pnpm run docs:build
+RUN pnpm run build \
+ && cd docs \
+ && node ../bin/dapplink.js build
 
 FROM nginx:1.27-alpine
 COPY nginx/docs.conf /etc/nginx/conf.d/default.conf
